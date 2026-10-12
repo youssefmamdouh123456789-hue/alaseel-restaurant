@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <title>مطعم الأصيل — من نحن</title>
+    <meta name="description" content="تعرف على قصة مطعم الأصيل، رسالتنا، رؤيتنا، وقيمنا في تقديم أصيل الطعم السعودي." />
+    <meta property="og:title" content="من نحن — مطعم الأصيل" />
+    <meta property="og:description" content="قصتنا، رسالتنا، ورؤيتنا في مطعم الأصيل." />
+    <meta property="og:image" content="assets/images/og-about.jpg" />
+
+    <!-- Google Fonts: Cairo + Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="css/about.css" />
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader" role="status" aria-label="جارٍ التحميل">
+        <p class="loader-name">مطعم <span>الأصيل</span></p>
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">مطعم <span>الأصيل</span></a>
+            <nav class="navbar__nav" aria-label="التنقل الرئيسي">
+                <ul class="navbar__links" id="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="menu.html">القائمة</a></li>
+                    <li><a href="about.html" aria-current="page">من نحن</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="navbar__cta">
+                <a href="#" class="cart-badge" aria-label="سلة التسوق">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" aria-live="polite">0</span>
+                </a>
+                <a href="index.html#reservation" class="btn btn--primary">احجز طاولة</a>
+                <button id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="about-hero__overlay"></div>
+            <div class="container about-hero__content">
+                <h1 class="about-hero__title reveal">من نحن</h1>
+                <p class="about-hero__subtitle reveal">نحكي لكم قصتنا، شغفنا، وقيمنا في تقديم أصيل الطعم السعودي</p>
+            </div>
+        </section>
+
+        <!-- Founding Story Section -->
+        <section class="about-story section" aria-labelledby="story-heading">
+            <div class="container about-story__grid">
+                <div class="about-story__text">
+                    <h2 id="story-heading" class="section-title reveal">قصتنا</h2>
+                    <p class="about-story__body reveal">
+                        في عام ٢٠١٠م، وُلد مطعم الأصيل من رحم الشغف بالمطبخ السعودي الأصيل، في قلب مدينة الرياض.
+                        بدأت القصة على يد عائلة سعودية عريقة، تحمل في قلبها وصفات توارثتها جيلاً بعد جيل، وتؤمن بأن
+                        الطعام ليس مجرد وجبة، بل تجربة تجمع الأحبة وتُحيي الذكريات.
+                    </p>
+                    <p class="about-story__body reveal">
+                        انطلق المطعم بمطبخ صغير وحلم كبير: تقديم نكهات المملكة الأصيلة — من الكبسة الشهية والمندي
+                        الفاخر إلى الجريش والمرق العريق — بأسلوب عصري يناسب الشباب والعائلات على حدٍّ سواء. وسرعان ما
+                        تحوّل المطعم إلى وجهة محبوبة يقصدها أهل الرياض للاحتفاء بمناسباتهم وقضاء أوقاتهم الجميلة.
+                    </p>
+                    <p class="about-story__body reveal">
+                        اليوم، وبعد أكثر من عقد من العطاء، يواصل مطعم الأصيل رسالته بنفس الحب والإخلاص، مستقبلاً
+                        ضيوفه بدفء الكرم السعودي الأصيل، ومقدِّماً لهم تجربة طعام لا تُنسى تجمع بين الأصالة والحداثة.
+                    </p>
+                </div>
+                <div class="about-story__image-wrap reveal">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=500&fit=crop&auto=format"
+                        alt="صورة من داخل مطعم الأصيل" class="about-story__img" loading="lazy" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="about-mv section" aria-labelledby="mv-heading">
+            <div class="container">
+                <h2 id="mv-heading" class="section-title reveal">رسالتنا ورؤيتنا</h2>
+                <p class="section-subtitle reveal">ما يحرّكنا كل يوم ويرسم طريقنا نحو المستقبل</p>
+                <div class="about-mv__grid">
+                    <article class="about-mv__card reveal" aria-label="رسالتنا">
+                        <div class="about-mv__icon">
+                            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="about-mv__label">رسالتنا</h3>
+                        <p class="about-mv__text">
+                            تقديم تجربة طعام سعودية أصيلة تجمع بين جودة المكونات الطازجة وفن الطهي التقليدي، في بيئة
+                            دافئة ومرحِّبة تجعل كل ضيف يشعر بأنه في بيته.
+                        </p>
+                    </article>
+                    <article class="about-mv__card reveal" aria-label="رؤيتنا">
+                        <div class="about-mv__icon about-mv__icon--accent">
+                            <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="about-mv__label">رؤيتنا</h3>
+                        <p class="about-mv__text">
+                            أن نكون الوجهة الأولى للمطبخ السعودي الأصيل في المملكة، ونموذجاً يُحتذى به في الحفاظ على
+                            الموروث الغذائي السعودي وتقديمه للأجيال القادمة بأسلوب عصري ومبتكر.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interior Image Section -->
+        <section class="about-gallery" aria-label="صور المطعم">
+            <div class="container">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=500&fit=crop&auto=format"
+                    alt="الأجواء الداخلية لمطعم الأصيل" class="about-gallery__img reveal" loading="lazy" />
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="about-values section" aria-labelledby="values-heading">
+            <div class="container">
+                <h2 id="values-heading" class="section-title reveal">قيمنا</h2>
+                <p class="section-subtitle reveal">المبادئ التي تُشكّل هويتنا وتوجّه كل ما نقدمه</p>
+                <div class="about-values__grid">
+
+                    <article class="about-values__card reveal">
+                        <div class="about-values__icon">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="about-values__name">الأصالة</h3>
+                        <p class="about-values__desc">
+                            نلتزم بالوصفات التقليدية المتوارثة ونحافظ على هوية المطبخ السعودي الأصيل في كل طبق نقدمه.
+                        </p>
+                    </article>
+
+                    <article class="about-values__card reveal">
+                        <div class="about-values__icon">
+                            <i class="fa-solid fa-award" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="about-values__name">الجودة</h3>
+                        <p class="about-values__desc">
+                            نختار أجود المكونات الطازجة ونتحكم في كل خطوة من خطوات الإعداد لضمان أعلى معايير الجودة.
+                        </p>
+                    </article>
+
+                    <article class="about-values__card reveal">
+                        <div class="about-values__icon">
+                            <i class="fa-solid fa-hands-holding-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="about-values__name">الضيافة</h3>
+                        <p class="about-values__desc">
+                            الكرم السعودي أصيل فينا؛ نستقبل كل ضيف بحفاوة وابتسامة ونحرص على أن تكون تجربته لا تُنسى.
+                        </p>
+                    </article>
+
+                    <article class="about-values__card reveal">
+                        <div class="about-values__icon">
+                            <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="about-values__name">الطازجية</h3>
+                        <p class="about-values__desc">
+                            نؤمن بأن الطعام الطيب يبدأ من مكونات طازجة؛ لذا نحرص على توفير أفضل المنتجات يومياً.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name">مطعم <span>الأصيل</span></p>
+                    <p class="footer__tagline">أصيل الطعم السعودي</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="سناب شات"><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="#" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer__heading">روابط سريعة</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__heading">تواصل معنا</h3>
+                    <p class="footer__contact-item"><i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية
+                        السعودية</p>
+                    <p class="footer__contact-item"><i class="fa-solid fa-phone"></i> <span dir="ltr">+966 50 000
+                            0000</span></p>
+                    <p class="footer__contact-item"><i class="fa-solid fa-envelope"></i> info@alaseel.sa</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© <span id="year"></span> مطعم الأصيل. جميع الحقوق محفوظة.</p>
+                <p>تصميم وتطوير: Eng/ Youssef Mamdouh</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

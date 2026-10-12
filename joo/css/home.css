@@ -1,0 +1,385 @@
+/**
+ * home.css — Home page styles for Al-Aseel Restaurant
+ * Covers: hero, featured dishes, reviews, why-us, reservation form
+ * Tasks: 5.1, 5.2, 5.3, 5.4, 8.1
+ */
+
+/* ── Hero Section (Task 5.1) ──────────────────────────────── */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&h=900&fit=crop&auto=format');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding-top: var(--navbar-height);
+}
+
+/* Dark overlay for text legibility */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-white);
+    padding-block: var(--space-16);
+}
+
+.hero__title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    color: var(--color-white);
+    line-height: 1.2;
+    margin-bottom: var(--space-4);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero__tagline {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-accent);
+    margin-bottom: var(--space-5);
+    letter-spacing: 0.03em;
+}
+
+.hero__description {
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin-inline: auto;
+    margin-bottom: var(--space-10);
+    line-height: 1.8;
+}
+
+.hero__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.hero__btn {
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    transition: background-color 300ms ease,
+        color 300ms ease,
+        border-color 300ms ease,
+        transform 300ms ease,
+        box-shadow 300ms ease;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .hero__title {
+        font-size: var(--font-size-5xl);
+    }
+
+    .hero__tagline {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+/* ── Featured Dishes Section (Task 5.2) ──────────────────── */
+.featured-dishes {
+    background-color: var(--color-light);
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+.dish-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.dish-card__img-wrap {
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background-color: var(--color-gray-light);
+}
+
+.dish-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 300ms ease;
+}
+
+.dish-card:hover .dish-card__img-wrap img {
+    transform: scale(1.05);
+}
+
+.dish-card__body {
+    padding: var(--space-5) var(--space-5) var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+
+.dish-card__name {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.dish-card__price {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.dish-card__price span {
+    font-size: var(--font-size-xl);
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .dishes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ── Reviews Section (Task 5.3) ──────────────────────────── */
+.reviews {
+    background-color: var(--color-white);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+.review-card {
+    background-color: var(--color-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-gray-light);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.review-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.review-card__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: var(--font-size-xl);
+    flex-shrink: 0;
+}
+
+.review-card__name {
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-1);
+}
+
+.review-card__stars {
+    display: flex;
+    gap: 2px;
+    color: var(--color-accent);
+    font-size: var(--font-size-sm);
+}
+
+.review-card__text {
+    font-size: var(--font-size-md);
+    color: var(--color-gray);
+    line-height: 1.8;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 1024px) {
+    .reviews-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ── Why Us Section (Task 5.4) ───────────────────────────── */
+.why-us {
+    background-color: var(--color-light);
+}
+
+.why-us__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+.why-us__card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8) var(--space-6);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-gray-light);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.why-us__card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.why-us__icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(192, 57, 43, 0.1), rgba(230, 126, 34, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    margin-bottom: var(--space-5);
+    transition: background var(--transition-base);
+}
+
+.why-us__icon i {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    transition: color var(--transition-base);
+}
+
+.why-us__card:hover .why-us__icon {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+}
+
+.why-us__card:hover .why-us__icon i {
+    color: var(--color-white);
+}
+
+.why-us__heading {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-3);
+}
+
+.why-us__desc {
+    font-size: var(--font-size-md);
+    color: var(--color-gray);
+    line-height: 1.8;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+    .why-us__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 1024px) {
+    .why-us__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ── Reservation Section (Task 8.1) ──────────────────────── */
+.reservation {
+    background-color: var(--color-white);
+}
+
+.reservation .section-title {
+    color: var(--color-dark);
+}
+
+.reservation .section-subtitle {
+    color: var(--color-gray);
+}
+
+.reservation__wrapper {
+    max-width: 760px;
+    margin-inline: auto;
+    background-color: var(--color-light);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8) var(--space-6);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-gray-light);
+}
+
+.reservation__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 var(--space-6);
+}
+
+.reservation__submit {
+    width: 100%;
+    padding: var(--space-4);
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-2);
+}
+
+/* Tablet: 2-column grid for form fields */
+@media (min-width: 600px) {
+    .reservation__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Guests field spans full width on its own row */
+    .reservation__grid .form-group:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .reservation__wrapper {
+        padding: var(--space-10) var(--space-10);
+    }
+}

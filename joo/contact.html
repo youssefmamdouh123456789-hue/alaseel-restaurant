@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <title>مطعم الأصيل — تواصل معنا</title>
+    <meta name="description" content="تواصل مع مطعم الأصيل — عنواننا، أرقام التواصل، وإرسال رسالة مباشرة." />
+    <meta property="og:title" content="تواصل معنا — مطعم الأصيل" />
+    <meta property="og:description" content="تواصل مع مطعم الأصيل أو احجز طاولتك الآن." />
+    <meta property="og:image" content="assets/images/og-contact.jpg" />
+
+    <!-- Google Fonts: Cairo + Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader" role="status" aria-label="جارٍ التحميل">
+        <p class="loader-name">مطعم <span>الأصيل</span></p>
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">مطعم <span>الأصيل</span></a>
+            <nav class="navbar__nav" aria-label="التنقل الرئيسي">
+                <ul class="navbar__links" id="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="menu.html">القائمة</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html" aria-current="page">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="navbar__cta">
+                <a href="#" class="cart-badge" aria-label="سلة التسوق">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" aria-live="polite">0</span>
+                </a>
+                <a href="index.html#reservation" class="btn btn--primary">احجز طاولة</a>
+                <button id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contact Page Hero -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="section-title">تواصل معنا</h1>
+                <p class="section-subtitle">نسعد بتواصلك معنا في أي وقت</p>
+            </div>
+        </section>
+
+        <!-- Contact Info + Map + Form -->
+        <section class="contact-section section">
+            <div class="container">
+                <div class="contact-grid">
+
+                    <!-- Right column: Contact Info + Map -->
+                    <div class="contact-info-col">
+                        <div class="contact-info reveal">
+                            <h2 class="contact-info__title">معلومات التواصل</h2>
+                            <ul class="contact-info__list">
+                                <li class="contact-info__item">
+                                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                    <div>
+                                        <span class="contact-info__label">العنوان</span>
+                                        <span class="contact-info__value">الرياض، حي العليا، شارع العروبة</span>
+                                    </div>
+                                </li>
+                                <li class="contact-info__item">
+                                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                    <div>
+                                        <span class="contact-info__label">الهاتف</span>
+                                        <span class="contact-info__value" dir="ltr">+966 50 000 0000</span>
+                                    </div>
+                                </li>
+                                <li class="contact-info__item">
+                                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                                    <div>
+                                        <span class="contact-info__label">البريد الإلكتروني</span>
+                                        <span class="contact-info__value">info@alaseel.sa</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Google Maps Embed -->
+                        <div class="contact-map reveal">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.6!2d46.6753!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ5LjAiTiA0NsKwNDAnMzEuMSJF!5e0!3m2!1sar!2ssa!4v1234567890"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" title="موقع مطعم الأصيل على الخريطة"
+                                aria-label="خريطة موقع المطعم">
+                            </iframe>
+                            <!-- Fallback for blocked embeds -->
+                            <p class="contact-map__fallback">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                الرياض، حي العليا، شارع العروبة
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Left column: Contact Form -->
+                    <div class="contact-form-col reveal">
+                        <h2 class="contact-form__title">أرسل لنا رسالة</h2>
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">الاسم الكامل</label>
+                                <input type="text" id="contact-name" name="name" class="form-control"
+                                    placeholder="أدخل اسمك الكامل" required autocomplete="name" />
+                                <span class="error-msg" id="error-name" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">البريد الإلكتروني</label>
+                                <input type="email" id="contact-email" name="email" class="form-control"
+                                    placeholder="example@email.com" required autocomplete="email" dir="ltr" />
+                                <span class="error-msg" id="error-email" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-phone">رقم الهاتف</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-control"
+                                    placeholder="+966 50 000 0000" required autocomplete="tel" dir="ltr" />
+                                <span class="error-msg" id="error-phone" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-message">الرسالة</label>
+                                <textarea id="contact-message" name="message" class="form-control" rows="5"
+                                    placeholder="اكتب رسالتك هنا..." required></textarea>
+                                <span class="error-msg" id="error-message" role="alert"></span>
+                            </div>
+                            <button type="submit" class="btn btn--primary contact-form__submit">
+                                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                                أرسل رسالة
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name">مطعم <span>الأصيل</span></p>
+                    <p class="footer__tagline">أصيل الطعم السعودي</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="سناب شات"><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="#" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer__heading">روابط سريعة</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__heading">تواصل معنا</h3>
+                    <p class="footer__contact-item"><i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية
+                        السعودية</p>
+                    <p class="footer__contact-item"><i class="fa-solid fa-phone"></i> <span dir="ltr">+966 50 000
+                            0000</span></p>
+                    <p class="footer__contact-item"><i class="fa-solid fa-envelope"></i> info@alaseel.sa</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© <span id="year"></span> مطعم الأصيل. جميع الحقوق محفوظة.</p>
+                <p>تصميم وتطوير: Eng/ Youssef Mamdouh</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared JS -->
+    <script src="js/main.js"></script>
+    <!-- Page-specific JS -->
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

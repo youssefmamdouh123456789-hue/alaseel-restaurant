@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <title>مطعم الأصيل — القائمة</title>
+    <meta name="description"
+        content="تصفح قائمة مطعم الأصيل الكاملة — مقبلات، أطباق رئيسية، مشروبات، وحلويات سعودية أصيلة." />
+    <meta property="og:title" content="قائمة مطعم الأصيل" />
+    <meta property="og:description" content="تصفح قائمتنا الكاملة من الأطباق السعودية الأصيلة." />
+    <meta property="og:image" content="assets/images/og-menu.jpg" />
+
+    <!-- Google Fonts: Cairo + Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="css/menu.css" />
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader" role="status" aria-label="جارٍ التحميل">
+        <p class="loader-name">مطعم <span>الأصيل</span></p>
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar__logo">مطعم <span>الأصيل</span></a>
+            <nav class="navbar__nav" aria-label="التنقل الرئيسي">
+                <ul class="navbar__links" id="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="menu.html" aria-current="page">القائمة</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div class="navbar__cta">
+                <a href="#" class="cart-badge" aria-label="سلة التسوق">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" aria-live="polite">0</span>
+                </a>
+                <a href="index.html#reservation" class="btn btn--primary">احجز طاولة</a>
+                <button id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-section section" aria-labelledby="menu-heading">
+            <div class="container">
+                <h1 class="section-title reveal" id="menu-heading">قائمة الطعام</h1>
+                <p class="section-subtitle reveal">اكتشف أشهى الأطباق السعودية الأصيلة</p>
+
+                <!-- Category Filters -->
+                <div id="category-filters" class="category-filters" role="group" aria-label="تصفية حسب الفئة"></div>
+
+                <!-- Menu Grid -->
+                <div id="menu-grid" class="menu-grid" aria-live="polite" aria-label="قائمة الأطباق"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <p class="footer__brand-name">مطعم <span>الأصيل</span></p>
+                    <p class="footer__tagline">أصيل الطعم السعودي</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="سناب شات"><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="#" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer__heading">روابط سريعة</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="menu.html">القائمة</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__heading">تواصل معنا</h3>
+                    <p class="footer__contact-item"><i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية
+                        السعودية</p>
+                    <p class="footer__contact-item"><i class="fa-solid fa-phone"></i> <span dir="ltr">+966 50 000
+                            0000</span></p>
+                    <p class="footer__contact-item"><i class="fa-solid fa-envelope"></i> info@alaseel.sa</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© <span id="year"></span> مطعم الأصيل. جميع الحقوق محفوظة.</p>
+                <p>تصميم وتطوير: Eng/ Youssef Mamdouh</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared JS -->
+    <script src="js/main.js"></script>
+    <!-- Page-specific JS -->
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

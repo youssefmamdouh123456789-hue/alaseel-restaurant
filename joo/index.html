@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <title>مطعم الأصيل — الرئيسية</title>
+  <meta name="description"
+    content="مطعم الأصيل — أصيل الطعم السعودي. استمتع بأشهى الأطباق السعودية الأصيلة في أجواء عائلية دافئة." />
+  <meta property="og:title" content="مطعم الأصيل" />
+  <meta property="og:description" content="أصيل الطعم السعودي — أطباق سعودية أصيلة في أجواء عائلية." />
+  <meta property="og:image" content="assets/images/og-home.jpg" />
+
+  <!-- Google Fonts: Cairo + Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Page-specific styles -->
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+
+  <!-- Loader -->
+  <div id="loader" role="status" aria-label="جارٍ التحميل">
+    <p class="loader-name">مطعم <span>الأصيل</span></p>
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__logo">مطعم <span>الأصيل</span></a>
+      <nav class="navbar__nav" aria-label="التنقل الرئيسي">
+        <ul class="navbar__links" id="nav-links">
+          <li><a href="index.html" aria-current="page">الرئيسية</a></li>
+          <li><a href="menu.html">القائمة</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+      <div class="navbar__cta">
+        <a href="#" class="cart-badge" aria-label="سلة التسوق">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count" aria-live="polite">0</span>
+        </a>
+        <a href="#reservation" class="btn btn--primary">احجز طاولة</a>
+        <button id="hamburger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="nav-links">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section — Task 5.1 -->
+    <section class="hero" aria-label="القسم الرئيسي">
+      <div class="hero__content container">
+        <h1 class="hero__title">مطعم الأصيل</h1>
+        <p class="hero__tagline">أصيل الطعم السعودي</p>
+        <p class="hero__description">استمتع بأشهى الأطباق السعودية الأصيلة المُعدَّة بأجود المكونات الطازجة، في أجواء
+          عائلية دافئة تجمع بين الأصالة والحداثة.</p>
+        <div class="hero__cta">
+          <a href="menu.html" class="btn btn--primary hero__btn">
+            <i class="fa-solid fa-utensils"></i>
+            اطلب الآن
+          </a>
+          <a href="#reservation" class="btn btn--outline hero__btn">
+            <i class="fa-solid fa-calendar-check"></i>
+            احجز طاولة
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Dishes — Task 5.2 -->
+    <section class="featured-dishes section" aria-labelledby="featured-dishes-title">
+      <div class="container">
+        <h2 class="section-title" id="featured-dishes-title">أبرز الأطباق</h2>
+        <p class="section-subtitle">تشكيلة من أشهى الأطباق السعودية الأصيلة المُعدَّة بأجود المكونات</p>
+        <div class="dishes-grid">
+
+          <article class="dish-card reveal">
+            <div class="dish-card__img-wrap">
+              <img
+                src="https://images.pexels.com/photos/17650198/pexels-photo-17650198/free-photo-of-top-view-of-kabsa.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                alt="كبسة لحم" loading="lazy" width="400" height="300" />
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">كبسة لحم</h3>
+              <p class="dish-card__price" dir="ltr"><span>٤٥</span> ر.س</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal">
+            <div class="dish-card__img-wrap">
+              <img
+                src="https://images.pexels.com/photos/18698228/pexels-photo-18698228/free-photo-of-food-photography.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                alt="مندي دجاج" loading="lazy" width="400" height="300" />
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">مندي دجاج</h3>
+              <p class="dish-card__price" dir="ltr"><span>٣٥</span> ر.س</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal">
+            <div class="dish-card__img-wrap">
+              <img
+                src="https://images.pexels.com/photos/17650172/pexels-photo-17650172/free-photo-of-meal-with-spices-on-plate.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                alt="جريش" loading="lazy" width="400" height="300" />
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">جريش</h3>
+              <p class="dish-card__price" dir="ltr"><span>٢٥</span> ر.س</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal">
+            <div class="dish-card__img-wrap">
+              <img
+                src="https://images.pexels.com/photos/7741798/pexels-photo-7741798/free-photo-of-grilled-meat-on-black-plate.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                alt="مظبي خروف" loading="lazy" width="400" height="300" />
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">مظبي خروف</h3>
+              <p class="dish-card__price" dir="ltr"><span>٨٥</span> ر.س</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal">
+            <div class="dish-card__img-wrap">
+              <img src="https://i.pinimg.com/1200x/bd/07/f3/bd07f369d7551760f12f7f41c28bb899.jpg" alt="مطبق"
+                loading="lazy" width="400" height="300" />
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">مطبق</h3>
+              <p class="dish-card__price" dir="ltr"><span>٢٠</span> ر.س</p>
+            </div>
+          </article>
+
+          <article class="dish-card reveal">
+            <div class="dish-card__img-wrap">
+              <img src="https://i.pinimg.com/1200x/e4/70/f8/e470f8458babf6564efef4b08c163c61.jpg" alt="هريس"
+                loading="lazy" width="400" height="300" />
+            </div>
+            <div class="dish-card__body">
+              <h3 class="dish-card__name">هريس</h3>
+              <p class="dish-card__price" dir="ltr"><span>٢٢</span> ر.س</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews — Task 5.3 -->
+    <section class="reviews section" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 class="section-title" id="reviews-title">آراء عملائنا</h2>
+        <p class="section-subtitle">ماذا يقول ضيوفنا عن تجربتهم في مطعم الأصيل</p>
+        <div class="reviews-grid">
+
+          <article class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h3 class="review-card__name">أحمد بن سعد الغامدي</h3>
+                <div class="review-card__stars" aria-label="تقييم 5 من 5 نجوم">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-card__text">تجربة لا تُنسى! الكبسة هنا تذكّرني بطعم بيت أهلي. المكونات طازجة والنكهة أصيلة.
+              سأعود بالتأكيد مع عائلتي.</p>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h3 class="review-card__name">نورة بنت خالد العتيبي</h3>
+                <div class="review-card__stars" aria-label="تقييم 5 من 5 نجوم">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-card__text">الأجواء رائعة وتعكس الضيافة السعودية الأصيلة. المندي كان شهياً جداً والخدمة
+              سريعة ومميزة. أنصح الجميع بزيارة هذا المطعم.</p>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h3 class="review-card__name">محمد بن عبدالله القحطاني</h3>
+                <div class="review-card__stars" aria-label="تقييم 5 من 5 نجوم">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-card__text">جربت الجريش والهريس وكانا من أفضل ما أكلته. الطعام يُقدَّم ساخناً والكميات
+              وافرة. مطعم يستحق الزيارة المتكررة.</p>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <h3 class="review-card__name">سارة بنت فهد الدوسري</h3>
+                <div class="review-card__stars" aria-label="تقييم 5 من 5 نجوم">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-card__text">زرت المطعم مع صديقاتي وأُعجبنا جميعاً بالديكور الأنيق والطعم الرائع. المطبق كان
+              لذيذاً بشكل استثنائي. شكراً لفريق العمل المتميز!</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us — Task 5.4 -->
+    <section class="why-us section" aria-labelledby="why-us-title">
+      <div class="container">
+        <h2 class="section-title" id="why-us-title">لماذا نحن؟</h2>
+        <p class="section-subtitle">نقدّم لك تجربة طعام لا مثيل لها تجمع بين الأصالة والجودة والراحة</p>
+        <div class="why-us__grid">
+
+          <article class="why-us__card reveal">
+            <div class="why-us__icon" aria-hidden="true">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="why-us__heading">مكونات طازجة</h3>
+            <p class="why-us__desc">نختار أجود المكونات الطازجة يومياً لضمان أعلى مستويات الجودة والنكهة الأصيلة في كل
+              طبق.</p>
+          </article>
+
+          <article class="why-us__card reveal">
+            <div class="why-us__icon" aria-hidden="true">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <h3 class="why-us__heading">وصفات أصيلة</h3>
+            <p class="why-us__desc">وصفاتنا موروثة عبر الأجيال، تحمل عبق التراث السعودي الأصيل وتُعدّ بأسلوب تقليدي
+              محافظ.</p>
+          </article>
+
+          <article class="why-us__card reveal">
+            <div class="why-us__icon" aria-hidden="true">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="why-us__heading">أجواء عائلية</h3>
+            <p class="why-us__desc">نوفّر بيئة دافئة ومريحة تناسب العائلات والأصدقاء، لتجعل كل زيارة ذكرى لا تُنسى.</p>
+          </article>
+
+          <article class="why-us__card reveal">
+            <div class="why-us__icon" aria-hidden="true">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="why-us__heading">خدمة سريعة</h3>
+            <p class="why-us__desc">فريقنا المدرّب يحرص على تقديم طلبك بسرعة واحترافية دون المساس بجودة الطعام.</p>
+          </article>
+
+          <article class="why-us__card reveal">
+            <div class="why-us__icon" aria-hidden="true">
+              <i class="fa-solid fa-motorcycle"></i>
+            </div>
+            <h3 class="why-us__heading">توصيل سريع</h3>
+            <p class="why-us__desc">نوصّل طلبك ساخناً وطازجاً إلى باب منزلك في أسرع وقت ممكن وبأسعار مناسبة.</p>
+          </article>
+
+          <article class="why-us__card reveal">
+            <div class="why-us__icon" aria-hidden="true">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <h3 class="why-us__heading">حجز سهل</h3>
+            <p class="why-us__desc">احجز طاولتك بكل سهولة عبر الموقع في ثوانٍ معدودة وتأكّد من مقعدك المفضّل مسبقاً.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Form — Task 8.1 -->
+    <section class="reservation section" id="reservation" aria-labelledby="reservation-title">
+      <div class="container">
+        <h2 class="section-title" id="reservation-title">احجز طاولة</h2>
+        <p class="section-subtitle">احجز مقعدك الآن واستمتع بتجربة طعام أصيلة لا تُنسى</p>
+
+        <div class="reservation__wrapper">
+          <form id="reservation-form" novalidate>
+
+            <div class="reservation__grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label class="form-label" for="res-name">الاسم الكامل</label>
+                <input class="form-control" type="text" id="res-name" name="name" placeholder="أدخل اسمك الكامل"
+                  autocomplete="name" />
+                <span class="error-msg" id="error-res-name" role="alert"></span>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label class="form-label" for="res-phone">رقم الهاتف</label>
+                <input class="form-control" type="tel" id="res-phone" name="phone" placeholder="05XXXXXXXX"
+                  autocomplete="tel" dir="ltr" />
+                <span class="error-msg" id="error-res-phone" role="alert"></span>
+              </div>
+
+              <!-- Date -->
+              <div class="form-group">
+                <label class="form-label" for="res-date">تاريخ الحجز</label>
+                <input class="form-control" type="date" id="res-date" name="date" />
+                <span class="error-msg" id="error-res-date" role="alert"></span>
+              </div>
+
+              <!-- Time -->
+              <div class="form-group">
+                <label class="form-label" for="res-time">وقت الحجز</label>
+                <input class="form-control" type="time" id="res-time" name="time" />
+                <span class="error-msg" id="error-res-time" role="alert"></span>
+              </div>
+
+              <!-- Guests -->
+              <div class="form-group">
+                <label class="form-label" for="res-guests">عدد الأشخاص</label>
+                <input class="form-control" type="number" id="res-guests" name="guests" min="1" max="20"
+                  placeholder="1" />
+                <span class="error-msg" id="error-res-guests" role="alert"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary reservation__submit">
+              <i class="fa-solid fa-calendar-check"></i>
+              احجز الآن
+            </button>
+
+          </form>
+
+          <div id="reservation-success" class="success-msg" hidden aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand-name">مطعم <span>الأصيل</span></p>
+          <p class="footer__tagline">أصيل الطعم السعودي</p>
+          <div class="footer__social">
+            <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="انستغرام"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="سناب شات"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="#" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">روابط سريعة</h3>
+          <ul class="footer__links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="menu.html">القائمة</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">تواصل معنا</h3>
+          <p class="footer__contact-item"><i class="fa-solid fa-location-dot"></i> الرياض، المملكة العربية السعودية</p>
+          <p class="footer__contact-item"><i class="fa-solid fa-phone"></i> <span dir="ltr">+966 50 000 0000</span></p>
+          <p class="footer__contact-item"><i class="fa-solid fa-envelope"></i> info@alaseel.sa</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> مطعم الأصيل. جميع الحقوق محفوظة.</p>
+        <p>تصميم وتطوير: Eng/ Youssef Mamdouh</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shared JS -->
+  <script src="js/main.js"></script>
+  <!-- Page-specific JS -->
+  <script src="js/reservation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+/**
+ * contact.css — Contact page styles for Al-Aseel Restaurant
+ * Covers: contact hero, contact info, map embed, contact form
+ * Tasks: 7.1, 7.2
+ */
+
+/* ── Contact Hero ─────────────────────────────────────────── */
+.contact-hero {
+    padding-block: calc(var(--navbar-height) + var(--space-12)) var(--space-8);
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-soft) 100%);
+    text-align: center;
+}
+
+.contact-hero .section-title {
+    color: var(--color-white);
+}
+
+.contact-hero .section-title::after {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+.contact-hero .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Contact Section Grid ─────────────────────────────────── */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+/* ── Contact Info ─────────────────────────────────────────── */
+.contact-info {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-6);
+}
+
+.contact-info__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 2px solid var(--color-gray-light);
+}
+
+.contact-info__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.contact-info__item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+.contact-info__item>i {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-top: var(--space-1);
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.contact-info__item>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.contact-info__label {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-info__value {
+    font-size: var(--font-size-md);
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+/* ── Map Embed ────────────────────────────────────────────── */
+.contact-map {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.contact-map__fallback {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--color-gray-light);
+    font-size: var(--font-size-sm);
+    color: var(--color-gray);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.contact-map__fallback i {
+    color: var(--color-primary);
+}
+
+/* ── Contact Form ─────────────────────────────────────────── */
+.contact-form-col {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-form__title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 2px solid var(--color-gray-light);
+}
+
+.contact-form__submit {
+    width: 100%;
+    padding-block: var(--space-4);
+    font-size: var(--font-size-lg);
+    margin-top: var(--space-2);
+}
+
+/* Textarea height */
+.contact-form-col textarea.form-control {
+    resize: vertical;
+    min-height: 130px;
+}

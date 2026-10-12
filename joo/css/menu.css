@@ -1,0 +1,202 @@
+/**
+ * menu.css — Menu page styles for Al-Aseel Restaurant
+ * Covers: category filters, menu grid, card styles, image zoom, cart button
+ * Tasks: 6.1, 6.2
+ */
+
+/* ── Menu Section ─────────────────────────────────────────── */
+.menu-section {
+    padding-top: calc(var(--navbar-height) + var(--space-12));
+}
+
+/* ── Category Filters ─────────────────────────────────────── */
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    justify-content: center;
+    margin-bottom: var(--space-10);
+}
+
+.filter-btn {
+    padding: var(--space-2) var(--space-5);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--color-gray-light);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    transition: background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base),
+        transform var(--transition-fast);
+}
+
+.filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.filter-btn--active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.filter-btn--active:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+/* ── Menu Grid ────────────────────────────────────────────── */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 480px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ── Menu Item Card ───────────────────────────────────────── */
+.menu-item {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.menu-item:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+/* ── Card Figure / Image ──────────────────────────────────── */
+.menu-item__figure {
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background-color: var(--color-gray-light);
+}
+
+.menu-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 300ms ease;
+}
+
+.menu-item:hover .menu-item__img {
+    transform: scale(1.05);
+}
+
+/* ── Card Body ────────────────────────────────────────────── */
+.menu-item__body {
+    padding: var(--space-4) var(--space-5);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-2);
+}
+
+.menu-item__name {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1.4;
+}
+
+.menu-item__desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray);
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* ── Card Footer: price + button ─────────────────────────── */
+.menu-item__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+    flex-wrap: wrap;
+}
+
+.menu-item__price {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+/* ── Add to Cart Button ───────────────────────────────────── */
+.add-to-cart-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    font-family: var(--font-primary);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-base),
+        transform var(--transition-fast),
+        box-shadow var(--transition-base);
+    white-space: nowrap;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(0);
+}
+
+/* Visual feedback state (500ms) */
+.add-to-cart-btn--added {
+    background-color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+/* ── Hidden items (filtered out) ─────────────────────────── */
+.menu-item[hidden] {
+    display: none;
+}
